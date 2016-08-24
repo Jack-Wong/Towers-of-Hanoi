@@ -133,10 +133,10 @@
 /***/ function(module, exports) {
 
 	class HanoiView {
-	  constructor(HanoiGame, $el) {
-	    this.HanoiGame = HanoiGame;
+	  constructor(game, $el) {
+	    this.game = game;
 	    this.$el = $el;
-	    this.towerIdx = null;
+	    this.startTowerIdx = null;
 	    this.setupTowers();
 
 	    this.$el.on("click", this.clickTower)
@@ -158,7 +158,13 @@
 	  }
 
 	  clickTower(event) {
-
+	    const clickIdx = $(event.currentTarget).index()
+	    if (this.startTowerIdx === null){
+	      this.startTowerIdx = clickIdx;
+	    } else if (!this.game.move(this.startTowerIdx, clickIdx)) {
+	      alert("This move is invalid");
+	    }
+	    this.startTowerIdx = null;
 	  }
 	}
 

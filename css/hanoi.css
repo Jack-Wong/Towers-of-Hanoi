@@ -1,8 +1,6 @@
 .disk {
-  background-color: gray;
   width: 200px;
   height: 60px;
-  border: 1px solid black;
 }
 
 ul{
@@ -10,4 +8,5 @@ ul{
   width: 190px;
   margin: 0 auto;
   float: left;
+
 }
