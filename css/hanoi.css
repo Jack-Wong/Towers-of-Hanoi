@@ -1,12 +1,48 @@
-.disk {
-  width: 200px;
+.hanoi {
+  vertical-align: middle;
+  margin: 0 auto;
+
+
+}
+
+h1 {
+  text-align: center;
+}
+
+li {
+  width: 0 px;
   height: 60px;
+  margin: 0 auto;
 }
 
 ul{
   list-style-type: none;
-  width: 190px;
-  margin: 0 auto;
+  width: 180px;
   float: left;
+  border-bottom: 10px solid black;
+  margin-right: 10px;
+  padding: 0;
+}
 
+li.disk1 {
+  width: 60px;
+  background: gray;
+}
+
+li.disk2 {
+  width: 120px;
+  background: gray;
+}
+
+li.disk3 {
+  width: 180px;
+  background: gray;
+}
+
+ul:hover {
+  border-color: blue;
+}
+
+ul.selected {
+  border-color: green;
 }
